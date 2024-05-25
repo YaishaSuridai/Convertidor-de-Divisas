@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Divisas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="video-background-container">
+        <video autoplay muted loop id="video-background">
+            <source src="video.mp4" type="video/mp4">
+            <!-- Agrega diferentes formatos de vídeo para mejor compatibilidad -->
+        </video>
+        <div class="overlay"></div>
+    </div>
+    <div class="container">
+        <h1>Conversor de Divisas</h1>
+        <div class="conversion-form">
+            <label for="amount">Cantidad:</label>
+            <input type="number" id="amount" placeholder="Ingresa la cantidad">
+
+            <label for="fromCurrency">De:</label>
+            <select id="fromCurrency"></select>
+
+            <label for="toCurrency">A:</label>
+            <select id="toCurrency"></select>
+
+            <button id="convertButton">Convertir</button>
+        </div>
+        <div class="result">
+            <h2>Resultado:</h2>
+            <p id="resultText">0.00</p>
+        </div>
+    </div>
+
+    <!-- Modal para mostrar el resultado -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="result">
+                <h2>Resultado:</h2>
+                <p id="modalResultText">0.00</p>
+            </div>
+            <img src="good.gif" alt="Good GIF">
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
